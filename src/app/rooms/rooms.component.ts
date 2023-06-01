@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Room, RoomList } from './rooms';
 
 @Component({
   selector: 'hinv-rooms',
@@ -11,6 +12,42 @@ export class RoomsComponent implements OnInit {
   numberOfRooms = 10;
 
   hideRooms = false;
+
+  rooms: Room = {
+    totalRooms: 20,
+    availableRooms: 10,
+    bookedRooms: 5
+  };
+
+  roomList: RoomList[] = [
+    {
+      roomNumber: 1,
+      roomType: 'Deluxe Room',
+      amenities: 'Air Conditioner, Free Wi-Fi, TV, Kichen',
+      price: 500,
+      photos: 'https://media.istockphoto.com/id/1425461534/es/foto/mano-de-mujer-sosteniendo-una-botella-de-pl%C3%A1stico-vac%C3%ADa-para-tirarla.jpg?s=2048x2048&w=is&k=20&c=DV4CHF1tjulXyCBsMRDt2xqD8clM5zsVTGlNW4l6jk4=',
+      chekinTime: new Date('11-Nov-2023'),
+      checkoutTime: new Date('20-Nov-2024')
+    },
+    {
+      roomNumber: 2,
+      roomType: 'Deluxe Room',
+      amenities: 'Air Conditioner, Free Wi-Fi, TV, Kichen',
+      price: 1000,
+      photos: 'https://media.istockphoto.com/id/1425461534/es/foto/mano-de-mujer-sosteniendo-una-botella-de-pl%C3%A1stico-vac%C3%ADa-para-tirarla.jpg?s=2048x2048&w=is&k=20&c=DV4CHF1tjulXyCBsMRDt2xqD8clM5zsVTGlNW4l6jk4=',
+      chekinTime: new Date('11-Nov-2023'),
+      checkoutTime: new Date('20-Nov-2024')
+    },
+    {
+      roomNumber: 3,
+      roomType: 'Private Suite',
+      amenities: 'Air Conditioner, Free Wi-Fi, TV, Kichen',
+      price: 15000,
+      photos: 'https://media.istockphoto.com/id/1425461534/es/foto/mano-de-mujer-sosteniendo-una-botella-de-pl%C3%A1stico-vac%C3%ADa-para-tirarla.jpg?s=2048x2048&w=is&k=20&c=DV4CHF1tjulXyCBsMRDt2xqD8clM5zsVTGlNW4l6jk4=',
+      chekinTime: new Date('11-Nov-2023'),
+      checkoutTime: new Date('20-Nov-2024')
+    }
+  ]
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
