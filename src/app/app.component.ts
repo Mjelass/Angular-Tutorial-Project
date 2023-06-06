@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { RoomsComponent } from './rooms/rooms.component';
 
 @Component({
   selector: 'hinv-root',
@@ -9,8 +10,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
   //styles: [`h1 { color:red }`]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+
   title = 'muApp';
 
   role= 'Users';
+
+  // @ViewChild('user', { read: ViewContainerRef }) vcr!: ViewContainerRef;
+
+  // ngAfterViewInit(): void {
+  //   const componentRef = this.vcr.createComponent(RoomsComponent);
+  //   componentRef.instance.numberOfRooms = 50
+  // }
+
+  @ViewChild('name', {static: true}) name!: ElementRef;
+
+  ngOnInit(): void {
+    this.name.nativeElement.innerText = 'Holiii';
+    
+  }
+
 }
