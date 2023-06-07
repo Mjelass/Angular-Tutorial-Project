@@ -68,7 +68,8 @@
               "browserTarget": "muApp:build:production"
             },
             "development": {
-              "browserTarget": "muApp:build:development"
+              "browserTarget": "muApp:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
